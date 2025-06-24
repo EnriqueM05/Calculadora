@@ -1,43 +1,60 @@
-let a;
-let b;
-let c;
+let input = document.getElementById("a");
+let empty = 1;
 
-document.getElementById("sum").onclick = function(){
-    a = document.getElementById('a').value;
-    a = Number(a);
-    b = document.getElementById('b').value;
-    b = Number(b);
-    c = a + b;
-    
-    document.getElementById('countlabel').innerHTML = c;
-}
+input.addEventListener("input", function () {
+  const allowed = "0123456789+-/*(). ";
+  const lastChar = input.value.slice(-1);
+  if (!allowed.includes(lastChar)) {
+    input.value = input.value.slice(0, -1);
+  }
+  if (empty === 0) {
+    input.value = "";
+    empty = 1;
+  }
+});
 
-document.getElementById("resta").onclick = function(){
-    a = document.getElementById('a').value;
-    a = Number(a);
-    b = document.getElementById('b').value;
-    b = Number(b);
-    c = a - b;
-    
-    document.getElementById('countlabel').innerHTML = c;
-}
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Delete") {
+    input.value = "";
+  }
+});
 
-document.getElementById("divs").onclick = function(){
-    a = document.getElementById('a').value;
-    a = Number(a);
-    b = document.getElementById('b').value;
-    b = Number(b);
-    c = a / b;
-    
-    document.getElementById('countlabel').innerHTML = c;
-}
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    try {
+      const result = math.evaluate(input.value);
+      input.value = result;
+      empty = 0;
+    } catch (error) {
+      input.value = "Error";
+      console.log(error);
+    }
+  }
+});
 
-document.getElementById("multi").onclick = function(){
-    a = document.getElementById('a').value;
-    a = Number(a);
-    b = document.getElementById('b').value;
-    b = Number(b);
-    c = a * b;
-    
-    document.getElementById('countlabel').innerHTML = c;
-}
+document.getElementById("sum").onclick = function () {
+  input.value += "+";
+};
+
+document.getElementById("resta").onclick = function () {
+  input.value += "-";
+};
+
+document.getElementById("divs").onclick = function () {
+  input.value += "/";
+};
+
+document.getElementById("multi").onclick = function () {
+  input.value += "*";
+};
+
+document.getElementById("enter").onclick = function () {
+  try {
+    const result = math.evaluate(input.value);
+    input.value = result;
+    empty = 0;
+  } catch (error) {
+    input.value = "Error";
+    console.log(error);
+  }
+};

@@ -2,31 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caluator</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inclusive+Sans&family=Lato&family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
-</head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Inclusive+Sans&family=Lato&family=Libre+Baskerville&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <h1>Calculadora</h1>
-    
+
     <div id="container">
-      <input type="text" id="a" />
-      <br />
-      <input type="text" id="b" />
-      <br />
-      <button id="sum">+</button>
-      <button id="resta">-</button>
-      <button id="divs">/</button>
-      <button id="multi">*</button>
-      <br />
-      <div id="avs">
-        <label for="" id="countlabel">0</label>
+      <input
+        type="text"
+        id="a"
+      />
+      <div class="buttons">
+        <button
+          class="cell"
+          id="seven"
+        >
+          7
+        </button>
+
+        <button
+          class="cell"
+          id="eight"
+        >
+          8
+        </button>
+
+        <button
+          class="cell"
+          id="nine"
+        >
+          9
+        </button>
+
+        <button
+          class="cell"
+          id="four"
+        >
+          4
+        </button>
+
+        <button
+          class="cell"
+          id="five"
+        >
+          5
+        </button>
+
+        <button
+          class="cell"
+          id="six"
+        >
+          6
+        </button>
+
+        <button
+          class="cell"
+          id="one"
+        >
+          1
+        </button>
+
+        <button
+          class="cell"
+          id="two"
+        >
+          2
+        </button>
+
+        <button
+          class="cell"
+          id="three"
+        >
+          3
+        </button>
+
+        <button
+          class="cell"
+          id="sum"
+        >
+          +
+        </button>
+        <button
+          class="cell"
+          id="resta"
+        >
+          -
+        </button>
+        <button
+          class="cell"
+          id="divs"
+        >
+          /
+        </button>
+        <button
+          class="cell"
+          id="multi"
+        >
+          *
+        </button>
+        <button
+          class="cell"
+          id="enter"
+        >
+          =
+        </button>
       </div>
       <br />
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11/lib/browser/math.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
