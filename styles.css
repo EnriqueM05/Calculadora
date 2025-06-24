@@ -42,14 +42,15 @@ h1 {
 
 button {
   display: inline-block;
-  margin: 2px;
+  margin: 5px 2px;
   font-size: 35px;
-  width: 50px;
+  width: 150px;
   border-radius: 30px;
   border: none;
   text-align: center;
   transition: all 300ms ease;
   cursor: pointer;
+  padding: 30px;
 }
 
 button:hover {

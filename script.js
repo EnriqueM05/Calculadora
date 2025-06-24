@@ -32,6 +32,42 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+document.getElementById("one").onclick = function () {
+  input.value += "1";
+};
+
+document.getElementById("two").onclick = function () {
+  input.value += "2";
+};
+
+document.getElementById("three").onclick = function () {
+  input.value += "3";
+};
+
+document.getElementById("four").onclick = function () {
+  input.value += "4";
+};
+
+document.getElementById("five").onclick = function () {
+  input.value += "5";
+};
+
+document.getElementById("six").onclick = function () {
+  input.value += "6";
+};
+
+document.getElementById("seven").onclick = function () {
+  input.value += "7";
+};
+
+document.getElementById("eight").onclick = function () {
+  input.value += "8";
+};
+
+document.getElementById("nine").onclick = function () {
+  input.value += "9";
+};
+
 document.getElementById("sum").onclick = function () {
   input.value += "+";
 };
